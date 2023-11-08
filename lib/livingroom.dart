@@ -13,7 +13,8 @@ class LivingRoom extends StatelessWidget {
           backgroundColor: Color(0xff004aad),
           title: const Text('Living Room'),
         ),
-        body: Column(
+        body: SingleChildScrollView(
+            child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
@@ -25,7 +26,6 @@ class LivingRoom extends StatelessWidget {
                     decoration: TextDecoration.underline,
                   )),
             ),
-            // Expanded()
             Padding(
               padding: EdgeInsets.only(left: 0, bottom: 0, right: 0, top: 0),
               child: Row(
@@ -95,6 +95,6 @@ class LivingRoom extends StatelessWidget {
               fanName: "Fan",
             )
           ],
-        ));
+        )));
   }
 }

@@ -21,9 +21,7 @@ class MyApp extends StatelessWidget {
           ),
           body: Container(
             margin: const EdgeInsets.all(50),
-            child: const Center(
-              child: LoginForm(),
-            ),
+            child: LoginForm(),
           )),
     );
   }
@@ -53,7 +51,8 @@ class LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
-    return Form(
+    return SingleChildScrollView(
+        child: Form(
       key: _formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -116,11 +115,11 @@ class LoginFormState extends State<LoginForm> {
               },
               style:
                   ElevatedButton.styleFrom(backgroundColor: Color(0xff004aad)),
-              child: const Text('Submit'),
+              child: const Text('Login'),
             ),
           ),
         ],
       ),
-    );
+    ));
   }
 }
